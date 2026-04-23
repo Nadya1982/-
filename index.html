@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🤖 AI Tools Directory</title>
+  <title>🤖 AI Stack Guide</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Навигация -->
   <nav class="navbar">
     <div class="container nav-content">
       <a href="index.html" class="logo">🤖 AI Stack Guide</a>
@@ -20,7 +21,6 @@
     </div>
   </nav>
 
-  <!-- Герой-секция -->
   <header class="hero">
     <div class="container">
       <h1>Каталог ИИ-инструментов</h1>
@@ -28,14 +28,13 @@
     </div>
   </header>
 
-  <!-- Фильтры -->
   <main class="container">
     <section class="filters">
-      <input type="text" id="searchInput" class="search" placeholder="🔍 Поиск...">
+      <input type="text" id="searchInput" class="search" placeholder="🔍 Поиск по названию или описанию...">
       <select id="categoryFilter">
         <option value="">Все категории</option>
         <option value="Текст и ресёрч">📝 Текст</option>
-        <option value="Сайты и MVP">🌐 Сайты</option>
+        <option value="Сайты и MVP">💻 Сайты</option>
         <option value="Презентации">📊 Презентации</option>
         <option value="Изображения">🎨 Изображения</option>
         <option value="Видео">🎬 Видео</option>
@@ -51,12 +50,11 @@
       <button id="resetBtn" class="btn-outline">Сбросить</button>
     </section>
 
-    <!-- Сетка инструментов -->
     <section id="toolsGrid" class="tools-grid"></section>
   </main>
 
-  <!-- Плавающий помощник -->
-  <div id="assistantWidget" class="assistant-widget hidden">
+  <!-- Помощник -->
+  <div id="assistantWidget" class="assistant-widget">
     <div class="assistant-header">
       <span>🤖 AI-помощник</span>
       <button id="assistantClose">&times;</button>
@@ -69,10 +67,8 @@
   </div>
   <button id="assistantFloat" class="assistant-float">💬</button>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© 2026 AI Stack Guide • Учебный проект</p>
-    </div>
+  <footer style="text-align:center; padding:24px; color:var(--text-secondary); border-top:1px solid var(--card-border);">
+    <p>© 2026 AI Stack Guide • Учебный проект</p>
   </footer>
 
   <script src="js/app.js"></script>
