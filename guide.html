@@ -6,16 +6,33 @@
   <title>Гайд • AI Tools Directory</title>
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    .guide-content { padding: 40px 0; max-width: 800px; margin: 0 auto; }
-    .guide-content h2 { margin: 24px 0 12px; color: var(--primary); }
-    .guide-content .step {
-      background: white;
-      padding: 16px;
-      border-radius: 10px;
-      margin-bottom: 16px;
-      border-left: 4px solid var(--primary);
+    /* Переопределяем стили ТОЛЬКО для страницы Гайда */
+    .guide-content {
+      background: #ffffff;
+      color: #1e3a8a; /* Тёмно-синий текст */
+      padding: 40px;
+      border-radius: 16px;
+      margin: 30px auto 60px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
-    .guide-content .step strong { display: block; margin-bottom: 6px; }
+    .guide-content h1, .guide-content h2 {
+      color: #0f172a; /* Заголовки чуть темнее для контраста */
+    }
+    .guide-content .step {
+      background: #f8fafc;
+      border-left: 4px solid #1e3a8a;
+      color: #1e3a8a;
+    }
+    .guide-content ul, .guide-content p {
+      color: #1e3a8a;
+    }
+    .guide-content code {
+      background: #e0e7ff;
+      color: #1e40af;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 <body>
@@ -74,7 +91,7 @@
     </div>
   </main>
 
-  <footer class="footer">
+  <footer style="text-align:center; padding:24px; color:var(--text-secondary); border-top:1px solid var(--card-border);">
     <div class="container">
       <p>© 2026 AI Stack Guide • Учебный проект</p>
     </div>
