@@ -119,10 +119,24 @@ function filterTools() {
     : '<div class="card" style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-secondary)">😕 Ничего не найдено. Попробуйте изменить фильтры.</div>';
 }
 
+// Функция подсветки
+function updateSelectHighlight() {
+  categoryFilter?.classList.toggle('has-selection', !!categoryFilter.value);
+  vpnFilter?.classList.toggle('has-selection', !!vpnFilter.value);
+}
+
+// Обновлённые обработчики
 searchInput?.addEventListener('input', filterTools);
-categoryFilter?.addEventListener('change', filterTools);
-vpnFilter?.addEventListener('change', filterTools);
+categoryFilter?.addEventListener('change', () => { updateSelectHighlight(); filterTools(); });
+vpnFilter?.addEventListener('change', () => { updateSelectHighlight(); filterTools(); });
 resetBtn?.addEventListener('click', () => {
-  searchInput.value = ''; categoryFilter.value = ''; vpnFilter.value = ''; filterTools();
+  searchInput.value = ''; categoryFilter.value = ''; vpnFilter.value = '';
+  updateSelectHighlight();
+  filterTools();
 });
-if (grid) filterTools();
+
+// Запуск при загрузке страницы
+if (grid) {
+  filterTools();
+  updateSelectHighlight();
+}
