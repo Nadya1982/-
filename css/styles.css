@@ -205,3 +205,20 @@ body {
   .assistant-widget { width: calc(100vw - 32px); right: 16px; bottom: 80px; }
   .hero h1 { font-size: 1.9rem; }
 }
+/* Подсветка выбранного значения в фильтрах */
+select {
+  color: var(--text-secondary);
+  transition: color 0.2s, font-weight 0.2s;
+}
+select.has-selection {
+  color: var(--accent) !important; /* cyan #06b6d4 */
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.35);
+}
+
+/* Чтобы выпадающий список оставался читаемым на светлом фоне */
+select option {
+  background: #ffffff;
+  color: #0f172a;
+  padding: 10px 8px;
+}
